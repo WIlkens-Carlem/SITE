@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Álbum Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="site-title">Nosso Álbum Digital</h1>
+            <p id="site-description">Um lugar especial para nossas memórias</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="personalization-panel">
+                <h2>Personalizar</h2>
+                <div class="personalization-options">
+                    <div class="option">
+                        <label for="background-color">Cor de fundo:</label>
+                        <input type="color" id="background-color" value="#f8f9fa">
+                    </div>
+                    <div class="option">
+                        <label for="text-color">Cor do texto:</label>
+                        <input type="color" id="text-color" value="#212529">
+                    </div>
+                    <div class="option">
+                        <label for="site-title-input">Título do site:</label>
+                        <input type="text" id="site-title-input" placeholder="Nosso Álbum Digital">
+                    </div>
+                    <div class="option">
+                        <label for="site-description-input">Descrição:</label>
+                        <input type="text" id="site-description-input" placeholder="Um lugar especial para nossas memórias">
+                    </div>
+                    <button id="save-personalization">Salvar</button>
+                </div>
+            </section>
+
+            <section class="upload-section">
+                <h2>Adicionar Novas Memórias</h2>
+                <div class="upload-container">
+                    <div class="upload-area" id="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Arraste fotos ou vídeos aqui ou clique para selecionar</p>
+                        <input type="file" id="file-input" multiple accept="image/*,video/*" style="display: none;">
+                    </div>
+                    <button id="upload-button" class="primary-button">Fazer Upload</button>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Nossas Memórias</h2>
+                <div class="gallery-controls">
+                    <div class="view-options">
+                        <button id="grid-view" class="active"><i class="fas fa-th"></i> Grade</button>
+                        <button id="list-view"><i class="fas fa-list"></i> Lista</button>
+                    </div>
+                </div>
+                <div class="gallery" id="gallery">
+                    <!-- As imagens e vídeos serão adicionados aqui dinamicamente -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Criado com ❤️ para você | <a href="como-compartilhar.html" style="color: #6a11cb; text-decoration: underline;">Como compartilhar este site</a></p>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <video id="lightbox-video" controls style="display: none;"></video>
+        </div>
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Compartilhar Nosso Álbum Digital</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #6a11cb;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 0.5rem;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        
+        code {
+            background-color: #f1f1f1;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            white-space: pre-wrap;
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Como Compartilhar Nosso Álbum Digital</h1>
+            <p>Guia passo a passo para criar um link de acesso ao nosso site</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <p>Para que outras pessoas possam acessar nosso álbum digital de qualquer lugar, precisamos hospedá-lo na internet. Vamos usar o <strong>GitHub Pages</strong>, que é um serviço gratuito e fácil de usar.</p>
+        
+        <div class="step">
+            <h2><span class="step-number">1</span> Crie uma conta no GitHub</h2>
+            <p>O GitHub é uma plataforma que permite hospedar sites gratuitamente:</p>
+            <ul>
+                <li>Acesse <a href="https://github.com" target="_blank">github.com</a></li>
+                <li>Clique em "Sign up" e siga as instruções para criar uma conta gratuita</li>
+                <li>Confirme seu e-mail após o cadastro</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">2</span> Instale o Git no seu computador</h2>
+            <p>O Git é um programa que nos ajuda a enviar os arquivos para o GitHub:</p>
+            <ul>
+                <li>Baixe o instalador em <a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a></li>
+                <li>Execute o instalador e siga as instruções (pode manter todas as opções padrão)</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">3</span> Crie um novo repositório no GitHub</h2>
+            <p>Um repositório é como uma pasta online onde vamos guardar nosso site:</p>
+            <ul>
+                <li>Após fazer login no GitHub, clique no botão "+" no canto superior direito</li>
+                <li>Selecione "New repository"</li>
+                <li>Dê um nome ao repositório (por exemplo, "nosso-album-digital")</li>
+                <li>Deixe o repositório como "Public" (público)</li>
+                <li>Clique em "Create repository"</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">4</span> Envie os arquivos do site para o GitHub</h2>
+            <p>Agora vamos enviar todos os arquivos do nosso álbum digital para o GitHub:</p>
+            <ol>
+                <li>Abra o Prompt de Comando (CMD) no Windows</li>
+                <li>Digite os seguintes comandos, um por um:</li>
+            </ol>
+            
+            <p>Primeiro, navegue até a pasta do projeto:</p>
+            <div class="code-block">cd "c:\Users\Administrador\Documents\SITE"</div>
+            
+            <p>Inicialize um repositório Git local:</p>
+            <div class="code-block">git init
+git add .
+git commit -m "Versão inicial do nosso álbum digital"</div>
+            
+            <p>Conecte seu repositório local ao GitHub (substitua "SEU-USUARIO" pelo seu nome de usuário do GitHub):</p>
+            <div class="code-block">git remote add origin https://github.com/SEU-USUARIO/nosso-album-digital.git
+git branch -M main
+git push -u origin main</div>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">5</span> Ative o GitHub Pages</h2>
+            <p>Agora vamos configurar o GitHub para mostrar nosso site online:</p>
+            <ul>
+                <li>No GitHub, vá até o repositório que você acabou de criar</li>
+                <li>Clique na aba "Settings" (Configurações)</li>
+                <li>Role para baixo até encontrar a seção "Pages" no menu lateral esquerdo</li>
+                <li>Em "Source", selecione "Deploy from a branch"</li>
+                <li>Em "Branch", selecione "main" e clique em "Save"</li>
+                <li>Aguarde alguns minutos para que o site seja publicado</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">6</span> Compartilhe o link</h2>
+            <p>Após a publicação, o GitHub fornecerá um link para o seu site. Geralmente o formato é:</p>
+            <div class="code-block">https://SEU-USUARIO.github.io/nosso-album-digital/</div>
+            <p>Este é o link que você pode compartilhar para que outras pessoas acessem o site!</p>
+        </div>
+        
+        <div class="step">
+            <h2>Observações importantes</h2>
+            <ul>
+                <li>O site hospedado no GitHub Pages é público, ou seja, qualquer pessoa com o link pode acessá-lo</li>
+                <li>As imagens e vídeos que você adicionar ao álbum ficarão armazenados no navegador de quem acessar o site</li>
+                <li>Para atualizar o site após fazer alterações locais, você precisará enviar as mudanças para o GitHub novamente usando os comandos:</li>
+            </ul>
+            <div class="code-block">git add .
+git commit -m "Descrição das alterações"
+git push</div>
+        </div>
+        
+        <a href="index.html" class="btn">Voltar para o Álbum Digital</a>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Criado com ❤️ para você</p>
+        </div>
+    </footer>
+</body>
+</html>
