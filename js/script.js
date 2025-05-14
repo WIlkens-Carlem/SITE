@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos DOM
+    // Elementos de personalização
     const backgroundColorPicker = document.getElementById('background-color');
     const textColorPicker = document.getElementById('text-color');
     const siteTitleInput = document.getElementById('site-title-input');
     const siteDescriptionInput = document.getElementById('site-description-input');
-    const savePersonalizationBtn = document.getElementById('save-personalization');
+    const savePersonalizationButton = document.getElementById('save-personalization');
+    const settingsButton = document.getElementById('settings-button');
+    const personalizationPanel = document.querySelector('.personalization-panel');
     const siteTitle = document.getElementById('site-title');
     const siteDescription = document.getElementById('site-description');
     const uploadArea = document.getElementById('upload-area');
@@ -23,11 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSavedSettings();
 
     // Eventos de personalização
-    savePersonalizationBtn.addEventListener('click', savePersonalization);
+    savePersonalizationButton.addEventListener('click', savePersonalization);
     backgroundColorPicker.addEventListener('input', updatePreview);
     textColorPicker.addEventListener('input', updatePreview);
     siteTitleInput.addEventListener('input', updatePreview);
     siteDescriptionInput.addEventListener('input', updatePreview);
+    
+    // Evento do botão de configurações
+    settingsButton.addEventListener('click', function() {
+        if (personalizationPanel.style.display === 'none') {
+            personalizationPanel.style.display = 'block';
+        } else {
+            personalizationPanel.style.display = 'none';
+        }
+    });
 
     // Eventos de upload
     uploadArea.addEventListener('click', () => fileInput.click());
