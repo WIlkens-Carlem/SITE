@@ -45,7 +45,7 @@ Para criar um link de acesso ao site e compartilhá-lo com outras pessoas, você
    - Aguarde alguns minutos para que o site seja publicado
 
 6. **Acesse e compartilhe o link**
-   - Após a publicação, o GitHub fornecerá um link (geralmente no formato https://SEU-USUARIO.github.io/nosso-album-digital/)
+   - Após a publicação, o GitHub fornecerá um link (geralmente no formato https://WIlkens-Carlem.github.io/SITE/)
    - Este é o link que você pode compartilhar para que outras pessoas acessem o site
 
 ### Observações importantes
